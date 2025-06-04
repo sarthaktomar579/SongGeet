@@ -6,7 +6,7 @@ let currFolder;
 async function getSongs(folder) {
 
     currFolder = folder
-    let a = await fetch(`http://127.0.0.1:5500/${folder}/`)
+    let a = await fetch(`/${folder}/`)
     let response = await a.text();
     // get the DOM of song folder 
     // console.log(response);
@@ -63,7 +63,7 @@ async function getSongs(folder) {
 
 
 async function displayAlbums() {
-    let a = await fetch(`http://127.0.0.1:5500/songs`)
+    let a = await fetch(`/SongGeet/songs`)
     let response = await a.text();
 
     let div = document.createElement("div")
@@ -89,7 +89,7 @@ async function displayAlbums() {
             if (folder != 'songs') {
                 console.log(folder);
 
-                let a = await fetch(`http://127.0.0.1:5500/songs/${folder}/info.json`)
+                let a = await fetch(`/SongGeet/songs/${folder}/info.json`)
                 let response = await a.json();
                 console.log(response);
 
@@ -109,7 +109,7 @@ async function displayAlbums() {
 
                     </div>
 
-                    <img src= "/songs/${folder}/cover.jpg" alt="">
+                    <img src= "/SongGeet/songs/${folder}/cover.jpg" alt="">
                     <h2>${response.title}</h2>
                     <p>${response.description}</p>
                  </div>`
@@ -128,7 +128,7 @@ async function displayAlbums() {
             e.addEventListener("click", async item => {
                 // console.log(item , item.currentTarget.dataset);
     
-                songs = await getSongs(`songs/${item.currentTarget.dataset.folder}`)
+                songs = await getSongs(`SongGeet/songs/${item.currentTarget.dataset.folder}`)
                 playMusic(songs[0])
     
             })
@@ -163,7 +163,7 @@ const playMusic = (track, pause = false) => {
 async function main() {
 
     //get the list of all songs
-    await getSongs("songs/AA_Arijit_Singh")
+    await getSongs("SongGeet/songs/AA_Arijit_Singh")
     // console.log(songs);
 
     await displayAlbums()
