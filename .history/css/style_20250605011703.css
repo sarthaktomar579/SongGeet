@@ -128,19 +128,17 @@ body{
 }
 
 .play {
-    width: 28px;
-    height: 28px;
-    background-color: #1fdf64;
-    border-radius: 50%;
-    padding: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    bottom: 88px;
-    right: 17px;
-    opacity: var(--a);
-    transition: all 1s ease-out;
+  width: 58px;
+  height: 58px;
+  position: absolute;
+  top: 580px;
+  right: 27px;
+  opacity: 1;
+  transition: all 1s ease-out;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white; /* ✅ This fixes the invisible stroke */
 }
 
 .buttons > *{

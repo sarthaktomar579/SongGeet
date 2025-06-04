@@ -76,12 +76,11 @@ async function displayAlbums() {
         cardContainer.innerHTML += `
             <div data-folder="${folder}" class="card">
                 <div class="play">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
-                    xmlns="http://www.w3.org/2000/svg">
-                    <path d="M5 20V4L19 12L5 20Z" stroke="#141B34" fill="#000" stroke-width="1.5"
-                        stroke-linejoin="round" />
-                </svg>
-            </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="30" height="30">
+                        <circle cx="50%" cy="50%" r="12" fill="#1ed760"/>
+                        <path d="M18.8906 12.846...Z" stroke="currentColor" stroke-width="1" stroke-linejoin="round"/>
+                    </svg>
+                </div>
                 <img src="/songs/${folder}/cover.jpg" alt="">
                 <h2>${info.title}</h2>
                 <p>${info.description}</p>

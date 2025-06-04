@@ -127,7 +127,7 @@ body{
     
 }
 
-.play {
+.play{
     width: 28px;
     height: 28px;
     background-color: #1fdf64;
@@ -137,7 +137,7 @@ body{
     align-items: center;
     justify-content: center;
     position: absolute;
-    bottom: 88px;
+    top: 140px;
     right: 17px;
     opacity: var(--a);
     transition: all 1s ease-out;
