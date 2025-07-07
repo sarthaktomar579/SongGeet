@@ -61,45 +61,37 @@ async function getSongs(folder) {
 
 // Display available albums from server
 async function displayAlbums() {
-    let response = await (await fetch(`/songs`)).text();
-    
-    let div = document.createElement("div");
+    console.log("displaying albums")
+    let a = await fetch(`/songs/`)
+    let response = await a.text();
+    let div = document.createElement("div")
     div.innerHTML = response;
-
-    let anchors = Array.from(div.getElementsByTagName("a"));
-
-    
-let cardContainer = document.querySelector(".cardContainer");
-
-    for (const anchor of anchors) {
-        if (!anchor.href.includes("/songs") || anchor.href.endsWith("/songs")) continue;
-
-        let folder = anchor.href.split("/").pop();
-        let info = await (await fetch(`/songs/${folder}/info.json`)).json();
-
-        cardContainer.innerHTML += `
-            <div data-folder="${folder}" class="card">
-                <div class="play">
+    let anchors = div.getElementsByTagName("a")
+    let cardContainer = document.querySelector(".cardContainer")
+    let array = Array.from(anchors)
+    for (let index = 0; index < array.length; index++) {
+        const e = array[index]; 
+        if (e.href.includes("/songs") && !e.href.includes(".htaccess")) {
+            let folder = e.href.split("/").slice(-2)[0]
+            // Get the metadata of the folder
+            let a = await fetch(`/songs/${folder}/info.json`)
+            let response = await a.json(); 
+            cardContainer.innerHTML = cardContainer.innerHTML + ` <div data-folder="${folder}" class="card">
+            <div class="play">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
                     xmlns="http://www.w3.org/2000/svg">
                     <path d="M5 20V4L19 12L5 20Z" stroke="#141B34" fill="#000" stroke-width="1.5"
                         stroke-linejoin="round" />
                 </svg>
             </div>
-                <img src="/songs/${folder}/cover.jpg" alt="">
-                <h2>${info.title}</h2>
-                <p>${info.description}</p>
-            </div>`;
+
+            <img src="/songs/${folder}/cover.jpg" alt="">
+            <h2>${response.title}</h2>
+            <p>${response.description}</p>
+        </div>`
+        }
     }
 
-    // Add click event to each album card
-    Array.from(document.getElementsByClassName("card")).forEach(card => {
-        card.addEventListener("click", async () => {
-            songs = await getSongs(`songs/${card.dataset.folder}`);
-            playMusic(songs[0]);
-        });
-    });
-}
 
 // Main function to initialize
 async function main() {
@@ -119,7 +111,6 @@ async function main() {
     });
 
     next.addEventListener("click", () => {
-        clo(currentSong.src)
         let index = songs.indexOf(currentSong.src.split("/").pop());
         if (index + 1 < songs.length) playMusic(songs[index + 1]);
     });

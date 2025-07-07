@@ -69,7 +69,7 @@ async function displayAlbums() {
     let anchors = Array.from(div.getElementsByTagName("a"));
 
     
-let cardContainer = document.querySelector(".cardContainer");
+    let cardContainer = document.querySelector(".cardContainer");
 
     for (const anchor of anchors) {
         if (!anchor.href.includes("/songs") || anchor.href.endsWith("/songs")) continue;

@@ -62,14 +62,15 @@ async function getSongs(folder) {
 // Display available albums from server
 async function displayAlbums() {
     let response = await (await fetch(`/songs`)).text();
+    console.log(response);
     
     let div = document.createElement("div");
     div.innerHTML = response;
 
     let anchors = Array.from(div.getElementsByTagName("a"));
-
+    console.log(anchors);
     
-let cardContainer = document.querySelector(".cardContainer");
+    let cardContainer = document.querySelector(".cardContainer");
 
     for (const anchor of anchors) {
         if (!anchor.href.includes("/songs") || anchor.href.endsWith("/songs")) continue;

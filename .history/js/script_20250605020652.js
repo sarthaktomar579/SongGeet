@@ -25,20 +25,17 @@ const playMusic = (track, pause = false) => {
 // Load songs from a folder
 async function getSongs(folder) {
     currFolder = folder;
-    let response = await (await fetch(`/${folder}/`)).text();
-    let div = document.createElement("div");
-    div.innerHTML = response;
 
-    songs = Array.from(div.getElementsByTagName("a"))
-        .filter(a => a.href.endsWith(".mp3"))
-        .map(a => a.href.split(`/${folder}/`)[1]);
+    // Load song list from info.json
+    let info = await (await fetch(`/${folder}/info.json`)).json();
+    songs = info.songs;
 
     let songUL = document.querySelector(".songList ul");
     songUL.innerHTML = songs.map(song => `
         <li>
             <img class="invert" src="images/music.svg" alt="">
             <div class="info">
-                <div>${song.replaceAll("%20", " ")}</div>
+                <div>${song}</div>
                 <div>Saraj</div>
             </div>
             <div class="playNow">
@@ -47,8 +44,6 @@ async function getSongs(folder) {
             </div>
         </li>`).join("");
 
-    // Add click event to each song
-    
     Array.from(songUL.children).forEach(li => {
         li.addEventListener("click", () => {
             let track = li.querySelector(".info").firstElementChild.innerHTML;
@@ -59,17 +54,15 @@ async function getSongs(folder) {
     return songs;
 }
 
+
 // Display available albums from server
 async function displayAlbums() {
     let response = await (await fetch(`/songs`)).text();
-    
     let div = document.createElement("div");
     div.innerHTML = response;
 
     let anchors = Array.from(div.getElementsByTagName("a"));
-
-    
-let cardContainer = document.querySelector(".cardContainer");
+    let cardContainer = document.querySelector(".cardContainer");
 
     for (const anchor of anchors) {
         if (!anchor.href.includes("/songs") || anchor.href.endsWith("/songs")) continue;
@@ -119,7 +112,6 @@ async function main() {
     });
 
     next.addEventListener("click", () => {
-        clo(currentSong.src)
         let index = songs.indexOf(currentSong.src.split("/").pop());
         if (index + 1 < songs.length) playMusic(songs[index + 1]);
     });

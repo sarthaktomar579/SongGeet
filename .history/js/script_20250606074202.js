@@ -68,8 +68,7 @@ async function displayAlbums() {
 
     let anchors = Array.from(div.getElementsByTagName("a"));
 
-    
-let cardContainer = document.querySelector(".cardContainer");
+    let cardContainer = document.querySelector(".cardContainer");
 
     for (const anchor of anchors) {
         if (!anchor.href.includes("/songs") || anchor.href.endsWith("/songs")) continue;
@@ -119,8 +118,10 @@ async function main() {
     });
 
     next.addEventListener("click", () => {
-        clo(currentSong.src)
+        console.log(currentSong.src)
         let index = songs.indexOf(currentSong.src.split("/").pop());
+        console.log('');
+        
         if (index + 1 < songs.length) playMusic(songs[index + 1]);
     });
 
