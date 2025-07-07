@@ -1,0 +1,156 @@
+[
+  {
+    "folder": "AA_Arijit_Singh",
+    "title": "Arijit Singh",
+    "description": "Fall in love with Arijit’s melodies",
+    "cover": "cover.jpg",
+    "tracks": [
+      "Agar Tum Saath Ho - Tamasha_128-(DJMaza).mp3",
+      "Khairiyat - Chhichhore_128-(DJMaza).mp3",
+      "Kal Ki Hi Baat Hai - Chhichhore_128-(DJMaza).mp3",
+      "Tujhme Khoya Rahu Main_128-(DJMaza).mp3",
+      "Woh Din - Chhichhore_128-(DJMaza).mp3",
+      "Zara Kabhi Meri Nazar_128-(DJMaza).mp3"
+    ]
+  },
+  {
+    "folder": "AB_kishore_kumar",
+    "title": "Kishore Kumar",
+    "description": "Legends never fade",
+    "cover": "cover.jpg",
+    "tracks": [
+      "Chithi Na Koi Sandesh_128-(DJMaza).mp3",
+      "Dekha Ek Khwab To Ye Silsile Hue_128-(DJMaza).mp3",
+      "Kisi Ki Muskurahaton Pe - Vikram Vedha-(DJMaza).mp3",
+      "Mere Mehboob Qayamat Hogi_128-(DJMaza).mp3",
+      "Mere Naina Sawan Bhado-(DJMaza).mp3",
+      "Tere Jaisa Yaar Kahan - Kishore Kumar_128-(DJMaza).mp3",
+      "Woh Bharat Desh Hai Mera_128-(DJMaza).mp3"
+    ]
+  },
+  {
+    "folder": "AC_Diljit_dosanjh",
+    "title": "Diljit Dosanjh",
+    "description": "Feel the Punjabi vibes",
+    "cover": "cover.jpg",
+    "tracks": [
+      "Laembadgini - Diljit Dosanjh_128-(DJMaza).mp3",
+      "Meri Kalam Na Bole - Diljit Dosanjh_128-(DJMaza).mp3",
+      "Munda Sona Hoon Main Kudi Tu Crore Di_128-(DJMaza).mp3"
+    ]
+  },
+  {
+    "folder": "AD_B_Praak",
+    "title": "B Praak",
+    "description": "Powerful voice of emotion",
+    "cover": "cover.jpg",
+    "tracks": [
+      "Jeetenge - Mission Raniganj_128-(DJMaza).mp3",
+      "Kya Doge Tum_128-(DJMaza).mp3",
+      "Saari Duniya Jala Denge - Animal_128-(DJMaza).mp3"
+    ]
+  },
+  {
+    "folder": "AE_Mohit_Chauhan",
+    "title": "Mohit Chauhan",
+    "description": "Soulful melodies",
+    "cover": "cover.jpg",
+    "tracks": [
+      "Bolo Na - 12th Fail-(DJMaza).mp3",
+      "Darkhaast - Shivaay-(DJMaza) - Copy.mp3",
+      "Main Jahan Rahoon_128-(DJMaza).mp3",
+      "Munda Sona Hoon Main Kudi Tu Crore Di_128-(DJMaza) - Copy.mp3",
+      "Raanjhanaa - Title-(DJMaza).mp3"
+    ]
+  },
+  {
+    "folder": "Bright_(mood)",
+    "title": "Bright (Mood)",
+    "description": "Upbeat & uplifting",
+    "cover": "cover.jpg",
+    "tracks": [
+      "Darkhaast - Shivaay-(DJMaza) - Copy (2).mp3"
+    ]
+  },
+  {
+    "folder": "Chill_(mood)",
+    "title": "Chill (Mood)",
+    "description": "Laid‑back vibes",
+    "cover": "cover.jpg",
+    "tracks": [
+      "Munda Sona Hoon Main Kudi Tu Crore Di_128-(DJMaza) - Copy.mp3"
+    ]
+  },
+  {
+    "folder": "Dark_(mood)",
+    "title": "Dark (Mood)",
+    "description": "Deep & introspective",
+    "cover": "cover.jpg",
+    "tracks": [
+      "jai Namo Namo Shivaay - Hansraj Raghuwanshi-(DJMaza) - Copy (2).mp3",
+      "Kun Faaya Kun - Rockstar_128-(DJMaza).mp3"
+    ]
+  },
+  {
+    "folder": "Funky_(mood)",
+    "title": "Funky (Mood)",
+    "description": "Get groovy",
+    "cover": "cover.jpg",
+    "tracks": [
+      "Laembadgini - Diljit Dosanjh_128-(DJMaza) - Copy.mp3"
+    ]
+  },
+  {
+    "folder": "Gussa_(mood)",
+    "title": "Gussa (Mood)",
+    "description": "Angry & intense",
+    "cover": "cover.jpg",
+    "tracks": [
+      "Saari Duniya Jala Denge - Animal_128-(DJMaza).mp3"
+    ]
+  },
+  {
+    "folder": "Love_(mood)",
+    "title": "Love (Mood)",
+    "description": "Romantic serenades",
+    "cover": "cover.jpg",
+    "tracks": []
+  },
+  {
+    "folder": "Motivational_(mood)",
+    "title": "Motivational (Mood)",
+    "description": "Rise & shine",
+    "cover": "cover.jpg",
+    "tracks": [
+      "Main Jahan Rahoon_128-(DJMaza).mp3"
+    ]
+  },
+  {
+    "folder": "Rain_(mood)",
+    "title": "Rain (Mood)",
+    "description": "Pitter‑patter beats",
+    "cover": "cover.jpg",
+    "tracks": [
+      "Darkhaast - Shivaay-(DJMaza).mp3",
+      "Raanjhanaa - Title-(DJMaza).mp3"
+    ]
+  },
+  {
+    "folder": "Sleep_(mood)",
+    "title": "Sleep (Mood)",
+    "description": "Dreamy soundscapes",
+    "cover": "cover.jpg",
+    "tracks": [
+      "Darkhaast - Shivaay-(DJMaza) - Copy.mp3"
+    ]
+  },
+  {
+    "folder": "Space_(mood)",
+    "title": "Space (Mood)",
+    "description": "Cosmic & ethereal",
+    "cover": "cover.jpg",
+    "tracks": [
+      "Bolo Na - 12th Fail-(DJMaza).mp3"
+    ]
+  }
+]
